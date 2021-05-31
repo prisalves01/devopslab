@@ -11,7 +11,7 @@ script:
 - python -m unittest -v test
 deploy:
   provider: gae
-  keyfile: "/home/vagrant/lab-devops-cloud-4aso-7db8a415381e.json"
+  keyfile: /home/vagrant/lab-devops-cloud-4aso-7db8a415381e.json
   project: 510920568885
-  true:
+  on:
     branch: main
