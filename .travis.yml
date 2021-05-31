@@ -1,28 +1,17 @@
 before_install:
 - openssl aes-256-cbc -K $encrypted_e981e1d65812_key -iv $encrypted_e981e1d65812_iv
   -in lab-devops-cloud-4aso-7db8a415381e.json.enc -out ../lab-devops-cloud-4aso-7db8a415381e.json
-  -d    
-
-# Linguagem Utilizada para Desenvolver a Aplicação
+  -d
 language: python
-
-# Versão que a aplicação suporta.
 python:
-  - "3.7.9"
-
-# Instalação de Módulos que são necessários para a Aplicação.
+- 3.7.9
 install:
-  - pip install flask
-
-# Defini o script de Teste que deve rodar toda vez que o código for alterado.
+- pip install flask
 script:
-  - python -m unittest -v test
-
-
-# Definir o Deploy no Heroku
+- python -m unittest -v test
 deploy:
   provider: gae
-  keyfile: /home/vagrant/lab-devops-cloud-4aso-7db8a415381e.json
+  keyfile: "/home/vagrant/lab-devops-cloud-4aso-7db8a415381e.json"
   project: 510920568885
-  on:
+  true:
     branch: main
