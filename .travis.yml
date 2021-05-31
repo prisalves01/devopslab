@@ -16,12 +16,12 @@ script:
     
 # Definir o Deploy no Heroku
 deploy:
-  provider: heroku
-  api_key: $HEROKU_API_KEY
-  edge: true 
-  app: devopslab-prisalves 
-  on:
-      branch: main
+        #  provider: heroku
+        #  api_key: $HEROKU_API_KEY
+        #edge: true 
+        #app: devopslab-prisalves 
+        #on:
+        #branch: main
   provider: gae
   keyfile: /home/vagrant/lab-devops-cloud-4aso-7db8a415381e.json
   project: 510920568885
