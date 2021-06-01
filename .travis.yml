@@ -1,9 +1,9 @@
 before_install:
-        #- openssl aes-256-cbc -K $encrypted_e981e1d65812_key -iv $encrypted_e981e1d65812_iv
-        # -in lab-devops-cloud-4aso-7db8a415381e.json.enc -out ../lab-devops-cloud-4aso-7db8a415381e.json
-        # -d
-- openssl aes-256-cbc -K $encrypted_69bf7d5b2e47_key -iv $encrypted_69bf7d5b2e47_iv
-  -in key.json.enc -out ../key.json -d
+- openssl aes-256-cbc -K $encrypted_e981e1d65812_key -iv $encrypted_e981e1d65812_iv
+  -in lab-devops-cloud-4aso-7db8a415381e.json.enc -out ../lab-devops-cloud-4aso-7db8a415381e.json
+  -d
+        #- openssl aes-256-cbc -K $encrypted_69bf7d5b2e47_key -iv $encrypted_69bf7d5b2e47_iv
+        #  -in key.json.enc -out ../key.json -d
 language: python
 python:
 - 3.7.9
@@ -13,7 +13,7 @@ script:
 - python -m unittest -v test
 deploy:
   provider: gae
-  keyfile: "../key.json"
-  project: 510920568885
+  keyfile: "../lab-devops-cloud-4aso-7db8a415381e.json"
+  project: lab-devops-cloud-4aso
   on:
     branch: main
