@@ -11,7 +11,14 @@ install:
 - pip install flask
 script:
 - python -m unittest -v test
-deploy:
+deploy: 
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  edge: true
+  app: devopslab-prisalves
+  on:
+      branch: main
+
   provider: gae
   keyfile: "../lab-devops-cloud-4aso-7db8a415381e.json"
   project: lab-devops-cloud-4aso
