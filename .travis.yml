@@ -13,7 +13,7 @@ script:
 - python -m unittest -v test
 deploy:
   provider: gae
-  keyfile: "/home/vagrant/key.json"
+  keyfile: "../key.json"
   project: 510920568885
   on:
     branch: main
