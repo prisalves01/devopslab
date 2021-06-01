@@ -16,18 +16,17 @@ script:
     
 # Definir o Deploy no Heroku
 deploy:
-  provider: gae
-  keyfile: ../lab-devops-cloud-4aso-7db8a415381e.json
-  project: lab-devops-cloud-4aso
-  on:
-    branch: main
-
   provider: heroku
   api_key: $HEROKU_API_KEY
   edge: true
   app: devopslab-prisalves
   on:
-    branch: main
+          branch: main
+  provider: gae
+  keyfile: ../lab-devops-cloud-4aso-7db8a415381e.json
+  project: lab-devops-cloud-4aso
+  on:
+          branch: main
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_e981e1d65812_key -iv $encrypted_e981e1d65812_iv
