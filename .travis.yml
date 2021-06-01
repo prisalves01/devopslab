@@ -22,6 +22,8 @@ deploy:
   app: devopslab-prisalves
   on:
           branch: main
+
+deploy:          
   provider: gae
   keyfile: ../lab-devops-cloud-4aso-7db8a415381e.json
   project: lab-devops-cloud-4aso
